@@ -147,3 +147,62 @@ font-weight: 700;  /* the 700 value comes from Frontend mentor*/
   border: none;
   font-size: 16px;
 }
+
+
+/* ADVANCED STATS*/
+.stats {
+    display:flex;
+    flex-direction: column;
+    /*display:block;*/
+    align-items: center;
+    justify-content: center;
+    /*max-width: 420px;*/
+    /*padding: 60px 0 120px;*/
+    padding: 50px;
+    gap: 20px;
+    background-color: var(--light-bg); 
+}
+
+
+.cards {
+    display:flex;
+    /*justify-content: space-between*/
+    gap: 10px;
+}
+
+.cards  h3{
+  font-size: 18px;
+  /*line-height: 1.1; */
+  margin-bottom: 10px;
+
+}
+
+.cards  p{
+  color: var(--grayish-violet); 
+  margin-bottom: 30px;
+  max-width:500px;
+
+}
+
+
+.card {
+    /*border: 3px solid red;*/
+    max-width: 350px;
+    padding: 25px 20px 25px 20px;
+    border-radius: 10px;
+        background-color: white;
+}
+
+.icon {
+    /*background-color: var (--very-dark-violet); */
+    /*background-color: red;*/
+    /*background-color: hsl(260, 8%, 14%);*/
+    background-color: var(--dark-violet);  /* this was failing to attach at first bc of the space between 'var' and '('  */
+    max-width: 55px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 30px;
+}
+
