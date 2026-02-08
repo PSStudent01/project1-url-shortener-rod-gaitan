@@ -1,0 +1,126 @@
+/* allows you to create variables for each color that you can later use across your project, making for claener code  */
+:root {
+  --cyan: hsl(180, 66%, 49%);
+  --dark-violet: hsl(257, 27%, 26%);
+  --gray: hsl(0, 0%, 75%);
+  --grayish-violet: hsl(257, 7%, 63%);
+  --very-dark-blue: hsl(255, 11%, 22%);
+  --very-dark-violet: hsl(260, 8%, 14%);
+  --light-bg: #f0f1f6;
+
+  --Red: hsl(0, 87%, 67%)
+}
+
+ /* overrides the default settings to none for the following properties so that we can start fres*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  border: 3px solid red;
+  font-family: 'Poppins', sans-serif;
+  color: var(--very-dark-violet);
+}
+
+a {
+  text-decoration: none; /*removes the default underline that browsers apply to links.*/  
+  color: inherit;   /*by default links ignore their parent’s color and turn blue/purple.*/
+                     /*this overrides teh default and enforces inheretance. saying “Take whatever color my parent element is using.”*/
+                    /*allows you to control color at the container level instead of fixing every link manually.*/   
+}
+
+ /* this style will target all containers with 'container' class in them*/
+.container { 
+  border: 2px solid green;
+  max-width: 1200px;   /*limits how wide the container can get, even on huge screens, it will never exceed 1200px*/
+                        /*to determine this value, you should choose one that allows between 60–75 characters per line ideally, beyond that reading gets tiring*/
+                        /*on most fonts at normal body sizes appros 1100–1200px keeps text readable.*/
+  margin: auto;  /*sets left and right margins automatically, effectively centering the container horizontally
+                /*ONLY centers elements (ex CONTAINERS) that have a width or max-width, which is why it pairs perfectly with max-width in this case.*/
+  padding: 0 20px; /*adds spacing inside the container, thereby keeping the content from touching the edges.*/
+                 /*even if the container shrinks, on mobile devices thise ensures text doesn’t stick to the VIEWPORT edges */
+}
+
+/*  NAV BAR  */
+header {    
+  border: 2px solid blue;
+  padding: 40px 0; /*The '<header>' handles vertical spacing, while  '.container' inside handles horizontal spacing. Needed here bc it was sticking to the top viewport edge.*/
+}
+
+/* manipulating teh layout of the 2 CHILD div containers of the PARENT div */
+.nav {
+  display: flex; /* manipulates ALL the <div>s in my 'nav' class. ITC laying them from a column into an inline layout*/ 
+  /*justify-content: center; /*aligns the manipulated items (<div>s) HORIZONTALY (IOWs along the x axis) to be CENTERED*/
+  justify-content: space-between;  /*aligns the SPACE IN BETWEEN manipulated items (<div>s) HORIZONTALY (IOWs along the x axis) to be CENTERED */
+  align-items: center;  /*aligns the manipulated items (<div>s) VERTICALLY (IOWs along the y axis)*/
+}
+
+/* manipulating the layout of the ELEMENTS of BOTH CHILD divs, left and right */
+.nav-left,
+.nav-right {
+ display: flex; /*  manipulates ALL the ELEMENTS in the  child divs, laying them from a column into an inline layout*/ 
+ align-items: center; /*aligns the manipulated the ELEMENTS in the child divs VERTICALLY (IOWs along the y axis)*/
+ gap: 30px; /* creates spaces of 30px in between each element of each CHILD div */
+} 
+
+/*
+.nav a {
+  color: var(--grayish-violet);
+  font-weight: 500;
+}
+*/
+
+.nav button{
+color: var(--grayish-violet); /*applies color of variable '--grayish-violet' declared in the ':root' style rule  */
+font-weight: 700;  /* the 700 value comes from Frontend mentor*/
+}
+
+.logo {
+  font-weight: 700;  /* the 700 value comes from Frontend mentor*/
+}
+
+
+/*  BUTTONS */
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 700;
+  /*display: inline-block; /* 3 display types (block, inline, inline-block)*/
+}
+
+.primary {
+  background-color: var(--cyan); /*applies color of variable '--cyan' declared in the ':root' style rule  */
+  color: white;
+}
+
+/* HERO */
+
+.hero {
+  display: flex; /*the 'hero' section has 2 <div>s and when you apply this property, it lays out those 2 divs from block(column) to inline (row)*/
+  align-items: center;  /*aligns the manipulated items (<div>s) VERTICALLY (IOWs along the y axis)*/
+  padding: 60px 0 120px;
+  gap: 40px;
+} 
+
+.hero-text h1 {
+  font-size: 52px;
+  line-height: 1.1; /*line-height controls the vertical spacing of 'LINES of text' ONLY (spcing between text line and a say a button won't be affected) inside the <div>.*/
+                    /*1.1 mean it’s 1.1 times the font size (itc 52px).*/
+  margin-bottom: 20px; /* 1.1 wans't enough, so had to use to properly increment the text spacing exponentially.*/
+}
+
+.hero-text p {
+  color: var(--grayish-violet);  /*applies color of variable '--grayish-violet' declared in the ':root' style rule */
+  margin-bottom: 30px; /*it created the spacing between the text and the button that property 'line-height: 1.1;' coould not*/
+  max-width: 450px; /*VIP: targeting this one <p> element, this property squeezed the element's maxwidth forcing half of the paragraph text line to shift onto the next
+                    line below */
+}
+
+.hero-image img {
+  max-width: 100%;
+}
+
+/*  SHORTEN  */
