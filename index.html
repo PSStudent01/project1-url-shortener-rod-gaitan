@@ -35,7 +35,8 @@
 <body>
 
     <header>
-        <nav class="nav container">
+        <!--<nav class="nav container">-->
+            <nav class="nav container" aria-label="Main navigation">
             <div class="nav-left">
                 <h2 class="logo">Shortly</h2> <!-- I believe there is an image for this come back-->
                 <a href="#">Features</a>
@@ -69,7 +70,9 @@
 
     <section class="shorten-section">
         <div class="shorten-box container">
-            <input type="text" placeholder="Shorten a link here...">
+            <label for="shorten-input" class="visually-hidden">Enter URL to shorten</label>
+            <input type="text" placeholder="Shorten a link here..." aria-describedby="error-message">
+            <span id="error-message" role="alert"></span>
             <button class="btn primary">Shorten It!</button>
         </div>
     </section>
@@ -142,10 +145,10 @@
             </div>
 
             <div class="social-icons">
-            <img src="./images/icon-facebook.svg" alt="clickable social media icon to share expriences on Facebook.">
-            <img src="./images/icon-twitter.svg" alt="clickable social media icon to share expriences on Twitter.">
-            <img src="./images/icon-instagram.svg" alt="clickable social media icon to share expriences on Instagram.">
-            <img src="./images/icon-pinterest.svg" alt="clickable social media icon to share expriences on Pinterest.">
+            <a href="https://www.facebook.com/" aria-label="Facebook"><img src="./images/icon-facebook.svg" alt="clickable social media icon to share expriences on Facebook."></a>
+            <a href="https://x.com/" aria-label="Twitter"><img src="./images/icon-twitter.svg" alt="clickable social media icon to share expriences on Twitter."></a>
+            <a href="https://www.instagram.com/" aria-label="Instagram"><img src="./images/icon-instagram.svg" alt="clickable social media icon to share expriences on Instagram."></a>
+            <a href="https://www.pinterest.com/" aria-label="Pinterest"><img src="./images/icon-pinterest.svg" alt="clickable social media icon to share expriences on Pinterest."></a>
              </div>
         </div>
         </div>

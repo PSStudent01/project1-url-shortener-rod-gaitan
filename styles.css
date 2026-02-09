@@ -43,6 +43,7 @@ a {
                  /*even if the container shrinks, on mobile devices thise ensures text doesn’t stick to the VIEWPORT edges */
 }
 
+
 /*  NAV BAR  */
 header {    
   /*border: 2px solid blue;*/
@@ -60,6 +61,21 @@ header {
 .nav a { 
 color: var(--grayish-violet);
 font-weight: bold;
+}
+
+.nav a:hover,
+.nav a:focus {
+  /*color: var(--cyan);*/
+  color: var(--very-dark-violet);
+  text-decoration:none;
+}
+
+.nav a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 4px;
+  border-radius: 5px;
+  border: none;
 }
 
 /* manipulating the layout of the ELEMENTS of BOTH CHILD divs, left and right */
@@ -83,7 +99,14 @@ font-weight: 700;  /* the 700 value comes from Frontend mentor*/
 padding: 10px 18px;
 font-size: 15px;
 /*font-weight: bold;*/
-background-color: var(--cyan)
+background-color: var(--cyan);
+}
+
+.nav-right button:hover,
+.nav-right button:focus{  
+  /*background-color: hsl(180, 66%, 40%); /* slightly darker cyan */
+  background-color:hsl(180, 66%, 60%);
+  box-shadow: 0 4px 10px  var(--dark-violet);
 }
 
 
@@ -93,13 +116,13 @@ background-color: var(--cyan)
 
 
 /*  BUTTONS */
-
 .btn {
   padding: 10px 25px;
   border-radius: 25px;
   font-weight: 700;
   /*display: inline-block; /* 3 display types (block, inline, inline-block)*/
   border: none;
+  cursor: pointer;
 }
 
 .primary {
@@ -110,8 +133,15 @@ background-color: var(--cyan)
   font-size: 18px;
 }
 
-/* HERO */
+.primary:hover,
+.primary:focus {
+  /*background-color: hsl(180, 66%, 40%);*/
+  background-color:hsl(180, 66%, 60%); 
+  box-shadow: 0 4px 10px var(--dark-violet);
+}
 
+
+/* HERO */
 .hero {
   display: flex; /*the 'hero' section has 2 <div>s and when you apply this property, it lays out those 2 divs from block(column) to inline (row)*/
   align-items: center;  /*aligns the manipulated items (<div>s) VERTICALLY (IOWs along the y axis)*/
@@ -120,25 +150,28 @@ background-color: var(--cyan)
 } 
 
 .hero-text h1 {
-  font-size: 52px;
+  font-size: 80px;
   line-height: 1.1; /*line-height controls the vertical spacing of 'LINES of text' ONLY (spcing between text line and a say a button won't be affected) inside the <div>.*/
                     /*1.1 mean it’s 1.1 times the font size (itc 52px).*/
-  margin-bottom: 20px; /* 1.1 wans't enough, so had to use to properly increment the text spacing exponentially.*/
+  margin-bottom: 5px; /* 1.1 wans't enough, so had to use to properly increment the text spacing exponentially.*/
 }
 
 .hero-text p {
   color: var(--grayish-violet);  /*applies color of variable '--grayish-violet' declared in the ':root' style rule */
   margin-bottom: 30px; /*it created the spacing between the text and the button that property 'line-height: 1.1;' coould not*/
-  max-width: 450px; /*VIP: targeting this one <p> element, this property squeezed the element's maxwidth forcing half of the paragraph text line to shift onto the next
+  max-width: 590px; /*VIP: targeting this one <p> element, this property squeezed the element's maxwidth forcing half of the paragraph text line to shift onto the next
                     line below */
+  font-size: 20px;
+  font-weight: 550;
+  line-height: 1.5;
 }
 
 .hero-image img {
-  max-width: 100%;
+  max-width: 170%;
 }
 
-/*  SHORTEN  */
 
+/*  SHORTEN  */
 /*used the section to apply the non-layout properties*/
 .shorten-section { 
   background-color: var(--light-bg); /*applies color of variable '--light-bg' declared in the ':root' style rule  */
@@ -154,7 +187,6 @@ background-color: var(--cyan)
   /*margin-bottom: 10px;*/
 }
 
-
 .shorten-box input {
   flex: 1;  /* takes up all available space in the flex container, but shrinks if necessary. ITC, expands the input fiel to fit the available space within the <div> container*/
   padding: 15px;
@@ -162,6 +194,11 @@ background-color: var(--cyan)
   border: none;
   font-size: 16px;
   /*font-weight: bold;*/
+}
+
+.shorten-box input:focus {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
 }
 
 input::placeholder {
@@ -172,10 +209,21 @@ input::placeholder {
   font-weight: 500;
 }
 
-
 .shorten-section button{
     border-radius: 6px;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
 
 /* ADVANCED STATS*/
 .stats {
@@ -346,6 +394,13 @@ footer a {
   margin-bottom: 6px;
 }
 
+
+footer a:hover,
+footer a:focus {
+    color: var(--cyan);
+}
+
+
 .footer-nav {
 display: flex; 
 flex-direction: column;
@@ -358,68 +413,80 @@ align-items: flex-start;
     gap: 20px;
 }
 
+/*
+.social-icons a:hover,
+.social-icons a:focus {
+    color: var(--cyan);
+}
+*/
 
 
 
-/******************* RESPONSIVE DESIGN *********************/
-
-/* Tablets & below */
-@media (max-width: 900px) {
-
-  /* HERO */
+/* TABLETS & PHONES */
+@media (max-width: 1024px) {
+  /* HERO SECTION */
   .hero {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 40px 0 80px;
+    flex-direction: column; /* stacks hero text and image vertically */
+    text-align: center; 
+    padding: 40px 20px 80px;
+    gap: 30px;
   }
 
   .hero-text h1 {
-    font-size: 40px;
+    font-size: 60px; /* slightly smaller for tablets */
   }
 
   .hero-text p {
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 100%; /* takes full width */
   }
 
-  /* NAV */
-  .nav-left a {
-    display: none; /* hide nav links on smaller screens */
+  .hero-image img {
+    max-width: 100%;
   }
 
-  /* SHORTEN BOX */
-  .shorten-box {
+  /* NAVIGATION */
+  .nav {
     flex-direction: column;
+    gap: 20px;
   }
 
-  .shorten-box button {
-    width: 100%;
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
   }
 
   /* CARDS */
   .cards {
-    flex-direction: column;
+    flex-direction: column; /* stack cards vertically */
     align-items: center;
-  }
-
-  .cards::before {
-    width: 8px;
-    height: 100%;
-    top: 0;
+    gap: 60px; /* extra spacing between stacked cards */
   }
 
   .card:nth-child(2),
   .card:nth-child(3) {
-    margin-top: 0;
+    margin-top: 0; /* remove the downshift effect */
     margin-bottom: 0;
+  }
+
+  /* SHORTEN SECTION */
+  .shorten-box {
+    flex-direction: column; /* stack input + button */
+    transform: translateY(-40px); /* smaller overlap */
+  }
+
+  .shorten-box input,
+  .shorten-box button {
+    width: 100%; /* full width on mobile */
   }
 
   /* FOOTER */
   .footer {
     flex-direction: column;
-    gap: 40px;
-    text-align: center;
     align-items: center;
+    gap: 30px;
+    text-align: center;
   }
 
   .footer-nav {
@@ -427,31 +494,43 @@ align-items: flex-start;
   }
 }
 
-
-
-
-
-/*Phones
+/*  PHONES (small screens) */
 @media (max-width: 480px) {
-
   .hero-text h1 {
-    font-size: 32px;
+    font-size: 40px; /* small phones */
   }
 
-  h2 {
-    font-size: 24px;
+  .hero-text p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .nav a {
+    font-size: 14px; /* smaller nav links */
   }
 
   .primary {
-    width: 100%;
+    font-size: 16px;
+    padding: 12px 25px;
   }
 
-  .boost {
-    background-image: url("./images/bg-boost-mobile.svg");
+  .cards {
+    gap: 40px;
+  }
+
+  .card {
+    padding: 40px 20px 20px; /* shrink padding */
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+    padding: 14px;
+    top: -30px; /* adjust top position for smaller card */
   }
 
   .stats-text {
-    padding: 0 20px;
+    font-size: 14px;
+    margin: 20px auto 60px;
   }
 }
-*/
