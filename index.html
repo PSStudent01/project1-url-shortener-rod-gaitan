@@ -71,11 +71,24 @@
     <section class="shorten-section">
         <div class="shorten-box container">
             <label for="shorten-input" class="visually-hidden">Enter URL to shorten</label>
-            <input type="text" placeholder="Shorten a link here..." aria-describedby="error-message">
+            <input id="input-box" type="text" placeholder="Shorten a link here..." aria-describedby="error-message">
             <span id="error-message" role="alert"></span>
-            <button class="btn primary">Shorten It!</button>
+            <button class="btn primary" id="short-btn">Shorten It!</button>
         </div>
     </section>
+	
+
+  <!--  <section class="links-container">
+    Shortened links will appear here 
+   </section> -->
+
+<section class="links">
+   <div class="links-container">
+    Shortened links will appear here 
+   </div>
+ </section>
+
+
 
     <section class="stats container">
         <h2>Advanced Statistics</h2>
@@ -156,8 +169,9 @@
 
     <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Rod Gaitan</a>.
+        Coded by <a href="#">[Name]</a>.
     </div>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>

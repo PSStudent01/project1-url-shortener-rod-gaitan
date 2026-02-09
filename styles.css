@@ -63,6 +63,7 @@ color: var(--grayish-violet);
 font-weight: bold;
 }
 
+
 .nav a:hover,
 .nav a:focus {
   /*color: var(--cyan);*/
@@ -77,6 +78,7 @@ font-weight: bold;
   border-radius: 5px;
   border: none;
 }
+
 
 /* manipulating the layout of the ELEMENTS of BOTH CHILD divs, left and right */
 .nav-left,
@@ -133,11 +135,36 @@ background-color: var(--cyan);
   font-size: 18px;
 }
 
+/*
 .primary:hover,
 .primary:focus {
-  /*background-color: hsl(180, 66%, 40%);*/
+                                                                   background-color: hsl(180, 66%, 40%);
   background-color:hsl(180, 66%, 60%); 
   box-shadow: 0 4px 10px var(--dark-violet);
+}
+*/
+
+/* Hover: mouse over */
+.nav-right button:hover,
+.primary:hover {
+    background-color: hsl(180, 66%, 60%);
+    box-shadow: 0 4px 10px var(--dark-violet);
+}
+
+/* Keyboard focus only */
+.nav-right button:focus-visible,
+.primary:focus-visible {
+    outline: 3px solid var(--cyan);
+    outline-offset: 4px;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+/* Mouse focus (click) */
+.nav-right button:focus {
+    outline: none;   /* remove default focus ring for mouse */
+    box-shadow: none;
+    background-color: var(--cyan); /* optional, or revert to normal hover style */
 }
 
 
@@ -194,6 +221,9 @@ background-color: var(--cyan);
   border: none;
   font-size: 16px;
   /*font-weight: bold;*/
+
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
 .shorten-box input:focus {
@@ -223,6 +253,50 @@ input::placeholder {
   white-space: nowrap;
   border: 0;
 }
+
+.links-container {
+    /*border: 3px solid red;*/
+    /*margin-top: 40px;*/
+    padding: 20px;
+    /*background-color: var(--light-bg);*/ 
+                                     
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+     
+}
+
+.links{
+ background-color: var(--light-bg); 
+}
+
+
+.short-result {
+   /* margin-bottom: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin-bottom: 15px;
+}
+
+
+
+
+
 
 
 /* ADVANCED STATS*/
