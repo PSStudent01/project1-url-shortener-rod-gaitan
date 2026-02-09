@@ -357,3 +357,101 @@ align-items: flex-start;
     display: flex;
     gap: 20px;
 }
+
+
+
+
+/******************* RESPONSIVE DESIGN *********************/
+
+/* Tablets & below */
+@media (max-width: 900px) {
+
+  /* HERO */
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 0 80px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* NAV */
+  .nav-left a {
+    display: none; /* hide nav links on smaller screens */
+  }
+
+  /* SHORTEN BOX */
+  .shorten-box {
+    flex-direction: column;
+  }
+
+  .shorten-box button {
+    width: 100%;
+  }
+
+  /* CARDS */
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards::before {
+    width: 8px;
+    height: 100%;
+    top: 0;
+  }
+
+  .card:nth-child(2),
+  .card:nth-child(3) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-nav {
+    align-items: center;
+  }
+}
+
+
+
+
+
+/*Phones
+@media (max-width: 480px) {
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .primary {
+    width: 100%;
+  }
+
+  .boost {
+    background-image: url("./images/bg-boost-mobile.svg");
+  }
+
+  .stats-text {
+    padding: 0 20px;
+  }
+}
+*/
