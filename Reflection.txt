@@ -1,0 +1,9 @@
+Reflection
+
+During this project, my development process focused on building a highly interactive and user-friendly web application. I began by planning the HTML structure, ensuring that the layout was semantic and responsive across different devices. This included structuring key sections like form, navigation sections, and icon graphics while considering accessibility best practices such as ARIA labels and keyboard navigation.
+
+Styling was implemented using CSS with Flexbox and other layout tools to align elements, including centering icons within circular containers and managing background images. I added comments throughout the CSS, and JavaScript to document my choices and enforce consistency. One of the main challenges was integrating dynamic functionality with JavaScript, particularly ensuring that interactive elements like the input bar and form validation worked without breaking other components, this was really heart breaking. I addressed this by using try...catch logic for URL validation and testing different approaches to maintain responsiveness and functionality.
+
+Another challenge involved preparing the project for deployment and version control. Initially, some JavaScript files were placed in folders ignored by Git, which could have caused grading issues. I resolved this by reorganizing the files and ensuring clear, descriptive commits were made frequently to maintain a reliable project history.
+
+For future improvements, I plan to enhance accessibility further, add more error handling, and explore additional interactive features to improve the user experience. Overall, this project reinforced the importance of planning, testing, during development phases while highlighting the importance of clear documentation, version control, and problem-solving when implementing new features.
