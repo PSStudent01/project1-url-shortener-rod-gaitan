@@ -41,8 +41,8 @@ All of the following were completed to the best of my ability within the amount 
 
 ## My process
 - gathered all necessary documentation from Frontend Mentor
-- Read all documents, instructions carefully, including thos eof the API website "Bitly"
-- Drafted a "doodling map" of the layout and style to start the html (includedin this folder)
+- Read all documents, instructions carefully, including those of the API website "Bitly"
+- Drafted a "doodling map" of the layout and style to start the html (included in this folder)
 - then started coding, testing and troubleshooting along the way 
 
 ### Built with
@@ -59,7 +59,7 @@ All of the following were completed to the best of my ability within the amount 
 -- how devastating responsiveness can be when you do not constantly check it as you move along.
 -- I was initially planning on doing javascript on one file but I see a huge value in been able  to breakup you project into different modules that serve a particular purpose
 --- Effectively integrating the API, fetching from a live site and seen the magic at play was awesome
-- also got a chace to reinforce:
+- also got a chance to reinforce:
 --- Application interactivity – highly interactive with features like search, form validation, dynamic content updates
 --- Accessibility – semantic HTML, ARIA labels, keyboard navigation
 --- Version control / Git practices – frequent, clear, descriptive commits following best practices
