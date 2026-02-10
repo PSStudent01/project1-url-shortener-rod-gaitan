@@ -37,7 +37,7 @@ All of the following were completed to the best of my ability within the amount 
 ### Links
 
 - Solution URL: https://github.com/PSStudent01/project1-url-shortener-rod-gaitan
-- Live Site URL:  rod-ps-project-2026.netlify.app
+- Live Site URL:  (https://rod-ps-project-2026.netlify.app/)
 
 ## My process
 - gathered all necessary documentation from Frontend Mentor
