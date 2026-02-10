@@ -74,5 +74,8 @@ All of the following were completed to the best of my ability within the amount 
 ## Author
 - Website - Rodian Gaitan (rod-ps-project-2026.netlify.app)
 
+## PLEASE NOTE!!
+- Due to memory issues on my PC, I was getting incorrect responsiveness results related only to rendered fetched data.
+- In which case, all I had to do was refresh the page and most importly, close and reopen the dev tools and responsiveness recovered.
 
 
